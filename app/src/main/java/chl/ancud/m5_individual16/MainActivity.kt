@@ -18,11 +18,12 @@ class MainActivity : AppCompatActivity(), Adapter.PaisCallback {
     private fun initAdapter() {
         val adapter = Adapter()
         adapter.setData(PaisesLatam.paises)
+        adapter.setPaisCallback(this)
         binding.mainRv.adapter = adapter
     }
 
     override fun showPais(texto: String) {
-        TODO("Not yet implemented")
+        binding.txvMainTitulo.text = texto
     }
 
 
