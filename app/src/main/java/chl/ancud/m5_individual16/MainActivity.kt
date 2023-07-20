@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import chl.ancud.m5_individual16.databinding.ActivityMainBinding
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), Adapter.PaisCallback {
     lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,6 +19,10 @@ class MainActivity : AppCompatActivity() {
         val adapter = Adapter()
         adapter.setData(PaisesLatam.paises)
         binding.mainRv.adapter = adapter
+    }
+
+    override fun showPais(texto: String) {
+        TODO("Not yet implemented")
     }
 
 
